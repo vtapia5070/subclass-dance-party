@@ -5,6 +5,9 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url("http://www.soundelementsct.com/images2/lights3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -21,7 +24,20 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
+  width: 140px;
+
+}
+.dancer:hover {
+  width: 190px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.highlighted {
+  border: 10px solid;
 }
